@@ -44,7 +44,7 @@ RUN cd squid3-3.?.? \
     && cat /root/mime.conf >> /usr/share/squid3/mime.conf
 
 COPY squid.conf /etc/squid3/squid.conf
-COPY start_squid.sh /usr/local/bin/start_squid.sh
+COPY start_squid.sh squid_url_rewrite.py /usr/local/bin/
 
 VOLUME /var/spool/squid3 /etc/squid3/ssl_cert
 EXPOSE 3128 3129 3130
